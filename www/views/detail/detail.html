@@ -1,0 +1,33 @@
+<ion-view ion-title="Detalhes de {{currency.code}}">
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                Último
+                <span class="badge badge-stable">{{currency.ticker.last}}</span>
+            </ion-item>
+            <ion-item>
+                Pedido
+                <span class="badge badge-balanced">{{currency.ticker.ask}}</span>
+            </ion-item>
+            <ion-item>
+                Lance
+                <span class="badge badge-assertive">{{currency.ticker.bid}}</span>
+            </ion-item>
+            <ion-item>
+                Média diária
+                <span class="badge badge-dark">{{currency.ticker.averages.day}}</span>
+            </ion-item>
+            <ion-item>
+                Volume
+                <span class="badge badge-stable icon ion-social-bitcoin">{{currency.ticker.volume | number:2}}</span>
+            </ion-item>
+            <ion-item ui-sref="tabs.history({currency: currency.code})" class="item-icon-right">
+                Ver histórico
+                <span class="icon ion-arrow-right-b"></span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar class="bar-dark">
+        <h1 class="title">Atualizado às {{currency.ticker.timestamp | date:'mediumTime'}}</h1>
+    </ion-footer-bar>
+</ion-view>

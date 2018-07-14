@@ -1,0 +1,19 @@
+<ion-view view-title="Preço médio" hide-back-button="true">
+  <ion-content>
+      <div class="list list-inset">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Moeda
+          </div>
+          <select ng-model="history.currency" ng-change="changeCurrency()">
+            <option ng-repeat="currency in currencies | filter:{selected: true}"
+              value="{{currency.code}}" ng-selected="history.currency ==
+              currency.code">{{currency.code}} - {{currency.text}}</option>
+          </select>
+        </label>
+      </div>
+
+   <hc-chart options="chartOptions"></hc-chart>
+
+  </ion-content>
+</ion-view>
