@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "App bitcoin - Ionic in Action chapter5",
     "engines":{
-        "node": "8.11.2"
+        "node": "8.9.4"
     },
   "dependencies": {
     "gulp": "^3.5.6",
